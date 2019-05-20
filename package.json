@@ -1,0 +1,15 @@
+{
+  "name": "janrain-login-audit",
+  "version": "0.1.0",
+  "description": "Puppeteer and Lighthouse project to track B2C login widget performance",
+  "author": "Geoffrey Wemans <geoffrey.wemans.ext@delijn.be>",
+  "private": true,
+  "devDependencies": {
+    "lighthouse": "^5.0.0",
+    "luxon": "^1.15.0",
+    "puppeteer": "^1.16.0"
+  },
+  "scripts": {
+    "perf": "node src/main/puppeteer-lighthouse"
+  }
+}
