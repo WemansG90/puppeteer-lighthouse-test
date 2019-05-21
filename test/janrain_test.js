@@ -32,7 +32,7 @@ describe('Janrain widget speed', function() {
     });
 
     afterEach(async function () {
-        if (this.currentTest.state == 'passed') {
+        if (this.currentTest.state === 'passed') {
             try {
                 await helpers.reportWriter('results/passed', pageName, results);
             } catch (e) {

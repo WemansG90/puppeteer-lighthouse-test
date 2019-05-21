@@ -60,9 +60,9 @@ typings/
 dist
 local
 
-\.idea/workspace\.xml
+
 build/
-\.idea/
+.idea/
 results/
 
 *.DS_Store
