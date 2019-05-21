@@ -5,11 +5,16 @@
   "author": "Geoffrey Wemans <geoffrey.wemans.ext@delijn.be>",
   "private": true,
   "devDependencies": {
+    "chai": "^4.2.0",
     "lighthouse": "^5.0.0",
     "luxon": "^1.15.0",
+    "mocha": "^6.1.4",
     "puppeteer": "^1.16.0"
   },
   "scripts": {
-    "perf": "node src/main/puppeteer-lighthouse"
+    "test": "mocha"
+  },
+  "dependencies": {
+    "@types/chai": "^4.1.7"
   }
 }
