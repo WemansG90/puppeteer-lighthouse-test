@@ -36,7 +36,8 @@ async function verify(page, pageName) {
     const path = `./${resultsDir}/${pageName}_${timeStamp}`
     fs.writeFileSync(`${path}.json`,
         JSON.stringify(metrics, null, 2));
-    // const html = helpers.generateReport(`${path}.json`);
-    // fs.writeFileSync(`${path}.html`,html);
+    const html = helpers.generateReport(metrics.lhr);
+    fs.writeFileSync(`${path}.html`,html);
+    console.log()
     return metrics;
 }

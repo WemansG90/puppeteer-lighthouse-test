@@ -11,8 +11,8 @@ async function gatherLightHouseMetrics(page, config) {
     });
 }
 
-function generateReport(json){
-    return ReportGenerator.generateReportHtml(json);
+function generateReport(results) {
+    return ReportGenerator.generateReportHtml(results);
 }
 
 async function createDir(dirName) {
@@ -21,9 +21,20 @@ async function createDir(dirName) {
     }
 }
 
+async function getLighthouseResult(lhr, property) {
+    const jsonProperty = new Map()
+        .set('performance', await lhr.lhr.categories.performance.score * 100)
+        .set('pageSpeed', await lhr.lhr.audits["speed-index"].score * 100);
+
+
+    let result = await jsonProperty.get(property);
+    return result
+}
+
 module.exports = {
     gatherLightHouseMetrics,
     createDir,
-    generateReport
+    generateReport,
+    getLighthouseResult,
 };
 
