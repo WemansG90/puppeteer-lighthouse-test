@@ -4,8 +4,8 @@ The main goal of this repo is to test a login widget that is hidden behind a tok
 
 ## Prerequisites 
 
-Node LTS
-Yarn
+* Node LTS
+* Yarn
 
 ## Running the test
 
